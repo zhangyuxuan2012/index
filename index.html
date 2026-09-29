@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(27%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(57%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EI%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b4114">
+<meta name="description" content="在线文件转换站 | deployed with HTMLaunch">
+<link rel="canonical" href="https://zhangyuxuan2012.github.io/index/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="在线文件转换站">
+<meta property="og:title" content="在线文件转换站">
+<meta property="og:description" content="在线文件转换站 | deployed with HTMLaunch">
+<meta property="og:url" content="https://zhangyuxuan2012.github.io/index/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fzhangyuxuan2012.github.io%2Findex%2F?w=1200&h=630">
+<meta property="og:image:alt" content="在线文件转换站">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="在线文件转换站">
+<meta name="twitter:description" content="在线文件转换站 | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fzhangyuxuan2012.github.io%2Findex%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="在线文件转换站">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在线文件转换站</title>
+<style>
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --ink:#22211c; --muted:#6f6d63; --line:#e5e3da;
+  --accent:#0e7a63; --accent-soft:#e2f1ec; --accent-deep:#0a5f4e;
+  --text-c:#0e7a63; --table-c:#2f6fae; --image-c:#b0701e; --media-c:#b23a48;
+  --danger:#b23a2e; --radius:12px;
+  --font:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --mono:Consolas,"Cascadia Mono","Courier New",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:14px}
+a{color:var(--accent);text-decoration:none}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;flex:none}
+.brand h1{font-size:19px;font-weight:700;letter-spacing:.3px}
+.brand p{font-size:12.5px;color:var(--muted);margin-top:2px}
+.status{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:#c9c6bb}
+.pill.ok .dot{background:#2ba471}
+main{flex:1;width:100%;max-width:1180px;margin:0 auto;padding:22px 22px 8px}
+.toolbar{display:flex;gap:14px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:260px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+#search{width:100%;padding:11px 14px 11px 38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);outline:none;transition:border-color .15s,box-shadow .15s}
+#search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(14,122,99,.12)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 15px;font-size:13.5px;color:var(--muted);transition:all .15s}
+.tab:hover{border-color:var(--accent);color:var(--accent)}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab .n{opacity:.75;font-size:12px;margin-left:4px}
+.hint{background:var(--accent-soft);border:1px solid #cde4dc;color:var(--accent-deep);border-radius:10px;padding:10px 14px;font-size:13.5px;margin-bottom:16px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:12px;padding-bottom:30px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:9px;min-height:142px}
+.card:hover{border-color:var(--accent);box-shadow:0 6px 18px rgba(20,24,18,.07);transform:translateY(-2px)}
+.chips{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:12.5px;font-weight:700;border-radius:6px;padding:3px 8px;letter-spacing:.5px}
+.chip.from{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.chip.to{background:var(--c-soft,#e2f1ec);color:var(--c,var(--accent));border:1px solid transparent}
+.arrow{color:#b3b0a4;font-size:14px}
+.card h3{font-size:15px;font-weight:650}
+.card p{font-size:12.8px;color:var(--muted);line-height:1.55;flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tag{font-family:var(--mono);font-size:11px;color:#a3a095;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%}
+.empty{padding:60px 0;text-align:center;color:var(--muted);font-size:14px;grid-column:1/-1}
+.foot{max-width:1180px;margin:0 auto;width:100%;padding:14px 22px 22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);margin-top:8px}
+.backdrop{position:fixed;inset:0;background:rgba(28,27,22,.42);z-index:40}
+.modal{position:fixed;z-index:41;top:50%;left:50%;transform:translate(-50%,-50%);width:min(600px,calc(100vw - 32px));max-height:88vh;overflow:auto;background:var(--surface);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.22);padding:22px 24px 24px}
+.close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:none;background:var(--bg);color:var(--muted);border-radius:50%;font-size:15px;display:flex;align-items:center;justify-content:center}
+.close:hover{background:var(--line);color:var(--ink)}
+.m-head .chips{margin-bottom:10px}
+.m-head h2{font-size:19px;margin-bottom:6px}
+.m-head .desc{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:4px}
+.m-body{margin-top:16px}
+.dropzone{border:2px dashed var(--line);border-radius:12px;padding:26px 16px;text-align:center;cursor:pointer;transition:all .15s;background:var(--bg)}
+.dropzone:hover,.dropzone.over{border-color:var(--accent);background:var(--accent-soft)}
+.dropzone svg{color:var(--accent);margin-bottom:8px}
+.dz-text b{display:block;font-size:14.5px;font-weight:600;color:var(--ink)}
+.dz-text span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}
+.textzone textarea{width:100%;min-height:170px;border:1px solid var(--line);border-radius:10px;padding:12px;resize:vertical;outline:none;line-height:1.6;background:var(--surface)}
+.textzone textarea:focus{border-color:var(--accent)}
+.filelist{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.fitem{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}
+.fitem .fname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fitem .fsize{color:var(--muted);font-size:12px}
+.fitem button{border:none;background:none;color:var(--muted);font-size:15px;padding:2px 6px}
+.fitem button:hover{color:var(--danger)}
+.options{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.opt{font-size:13.5px;color:var(--ink)}
+.opt label{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.opt input[type=number],.opt input[type=text],.opt select{border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:var(--surface);outline:none;width:110px}
+.opt input[type=range]{width:150px;accent-color:var(--accent)}
+.opt .rval{font-family:var(--mono);font-size:12.5px;color:var(--accent);min-width:26px;text-align:right}
+.opt .chk{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.opt input[type=checkbox]{width:16px;height:16px;accent-color:var(--accent)}
+.actions{display:flex;align-items:center;gap:12px;margin-top:16px}
+.go{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 30px;font-size:15px;font-weight:600;transition:background .15s}
+.go:hover{background:var(--accent-deep)}
+.go:disabled{background:#9dbcb2;cursor:not-allowed}
+.go-hint{font-size:12.5px;color:var(--muted)}
+.progress{margin-top:14px}
+.bar{height:8px;background:var(--bg);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .2s}
+.p-text{font-size:12.5px;color:var(--muted);margin-top:7px}
+.results{display:flex;flex-direction:column;gap:7px;margin-top:14px}
+.ritem{display:flex;align-items:center;gap:10px;background:var(--accent-soft);border:1px solid #cde4dc;border-radius:9px;padding:9px 12px;font-size:13px}
+.ritem.err{background:#f9ece8;border-color:#ecd2c8}
+.ritem .rname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ritem .rsize{color:var(--muted);font-size:12px}
+.dl{background:var(--accent);color:#fff;border:none;border-radius:7px;padding:6px 14px;font-size:12.5px;font-weight:600}
+.dl:hover{background:var(--accent-deep)}
+.rmsg{color:var(--danger);font-size:12.5px;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.okmark{color:var(--accent);font-weight:700}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);background:#26241f;color:#fff;padding:11px 20px;border-radius:10px;font-size:13.5px;z-index:60;opacity:0;pointer-events:none;transition:all .25s;max-width:86vw;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:9px}
+  .card{min-height:128px;padding:12px}
+  .brand p{display:none}
+  .foot{flex-direction:column;gap:4px}
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1b1b18;--surface:#242420;--ink:#efeee9;--muted:#a4a194;--line:#35352f;
+        --accent:#3ec9a8;--accent-soft:#17332c;--accent-deep:#67d9bd;
+        --text-c:#4fd0b0;--table-c:#7db3e8;--image-c:#e0a34c;--media-c:#e07885;--danger:#ef8f80}
+  .pill{background:#262620;border-color:#38382f}
+  .card .chip.from{background:#2a2a24;color:#b5b2a5;border-color:#3a3a32}
+  .tag{color:#8a877b}
+  .dropzone{background:#20201c}
+  .fitem,.ritem{background:#20201c}
+  .ritem.err{background:#382a26;border-color:#5a3a32}
+  .modal{background:#242420}
+  .close{background:#2c2c26;color:#b5b2a5}
+  .toast{background:#efeee9;color:#1b1b18}
+  .empty{color:#8a877b}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0e7a63"/>
+        <path d="M19 26h25l-5-6m6 18H20l5 6" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h1>在线文件转换站</h1>
+        <p>打开即用 · 任何设备任何浏览器 · 转换在你的浏览器内完成，文件不上传</p>
+      </div>
+    </div>
+    <div class="status" id="status">
+      <span class="pill ok"><span class="dot"></span>浏览器引擎</span>
+      <span class="pill ok" id="pillCount"><span class="dot"></span>56 种转换方式</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="toolbar">
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="search" placeholder="搜索转换方式，例如 TXT→HTML、MP4→MP3、PNG→JPG…" autocomplete="off">
+    </div>
+    <nav class="tabs" id="tabs"></nav>
+  </section>
+  <section class="hint">全部 56 种转换都在<b>你的浏览器本地</b>完成，文件不会上传到任何服务器，关闭页面即自动销毁。音视频转换首次使用时需下载约 30MB 的网页版转换引擎（此后浏览器会缓存），请耐心等待。</section>
+  <section class="grid" id="grid"></section>
+</main>
+
+<footer class="foot">
+  <span>纯浏览器运行 · 无需服务器 · 转换全程不出设备</span>
+  <span id="footEngines"></span>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<div class="modal" id="modal" hidden>
+  <button class="close" id="closeBtn" aria-label="关闭">✕</button>
+  <div class="m-head">
+    <div class="chips" id="mChips"></div>
+    <h2 id="mTitle"></h2>
+    <p class="desc" id="mDesc"></p>
+  </div>
+  <div class="m-body">
+    <div class="dropzone" id="dropzone">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0 4 4m-4-4L8 8"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      <div class="dz-text"><b>点击选择文件，或拖拽到此处</b><span id="dzSub">支持一次拖入多个文件，将逐个转换</span></div>
+    </div>
+    <input type="file" id="fileInput" multiple hidden>
+    <div class="textzone" id="textzone" hidden>
+      <textarea id="textInput" placeholder="在此粘贴需要转换的文本…"></textarea>
+    </div>
+    <div class="filelist" id="fileList"></div>
+    <div class="options" id="options"></div>
+    <div class="actions">
+      <button class="go" id="goBtn">开始转换</button>
+      <span class="go-hint" id="goHint"></span>
+    </div>
+    <div class="progress" id="progress" hidden>
+      <div class="bar"><i id="barFill"></i></div>
+      <div class="p-text" id="pText"></div>
+    </div>
+    <div class="results" id="results"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const CAT_COLORS = {text:"text-c", table:"table-c", image:"image-c", media:"media-c"};
+const CATS = [["text","文本文档"],["table","表格数据"],["image","图片"],["media","音视频"]];
+let CONVS = [], curConv = null, files = [], opts = {}, busy = false, timer = null, queue = [], onProg = null;
+
+/* ================= 基础工具 ================= */
+const MIME = {mp3:"audio/mpeg",mp4:"video/mp4",m4v:"video/mp4",wav:"audio/wav",flac:"audio/flac",ogg:"audio/ogg",
+  gif:"image/gif",avi:"video/x-msvideo",webm:"video/webm",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",
+  ico:"image/x-icon",bmp:"image/bmp",tiff:"image/tiff",html:"text/html;charset=utf-8",md:"text/markdown",
+  txt:"text/plain;charset=utf-8",json:"application/json",csv:"text/csv",tsv:"text/tab-separated-values",
+  yaml:"text/yaml",yml:"text/yaml",xml:"application/xml",pdf:"application/pdf",
+  docx:"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  xlsx:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  ini:"text/plain",lrc:"text/plain",log:"text/plain"};
+function blobOf(text, to){ return new Blob([text], {type: MIME[to] || "application/octet-stream"}); }
+function readText(bytes){
+  const u8 = new Uint8Array(bytes);
+  for(const enc of ["utf-8","gb18030","big5"]){
+    try{ return new TextDecoder(enc, {fatal:true}).decode(u8); }catch(e){}
+  }
+  return new TextDecoder("utf-8").decode(u8);
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function fmtSize(n){
+  if(!n && n !== 0) return "";
+  if(n < 1024) return n + " B";
+  if(n < 1048576) return (n / 1024).toFixed(1) + " KB";
+  if(n < 1073741824) return (n / 1048576).toFixed(1) + " MB";
+  return (n / 1073741824).toFixed(2) + " GB";
+}
+let toastTimer = null;
+function toast(msg){
+  const t = $("#toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 3400);
+}
+function setBar(pct, text){
+  if(pct === null) $("#barFill").style.width = "70%";
+  else $("#barFill").style.width = pct + "%";
+  $("#pText").textContent = text;
+}
+function outFileName(name){
+  const stem = name.replace(/\.[^.\\/]+$/, "");
+  return stem + "." + curConv.to;
+}
+function downloadBlob(blob, name){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 40000);
+}
+/* CSV */
+function parseCSV(text){
+  const rows = []; let row = [], cur = "", inq = false;
+  const s = text.replace(/\r\n/g, "\n");
+  for(let i = 0; i < s.length; i++){
+    const c = s[i];
+    if(inq){
+      if(c === '"'){ if(s[i+1] === '"'){ cur += '"'; i++; } else inq = false; }
+      else cur += c;
+    } else if(c === '"') inq = true;
+    else if(c === ','){ row.push(cur); cur = ""; }
+    else if(c === '\n'){ row.push(cur); rows.push(row); row = []; cur = ""; }
+    else cur += c;
+  }
+  if(cur !== "" || row.length){ row.push(cur); rows.push(row); }
+  return rows;
+}
+function toCSV(rows){
+  return rows.map(r => r.map(c => {
+    c = String(c === null || c === undefined ? "" : c);
+    return /[",\n]/.test(c) ? '"' + c.replace(/"/g, '""') + '"' : c;
+  }).join(",")).join("\r\n");
+}
+function csvRows(text, sep){
+  return text.replace(/\r\n/g, "\n").split("\n").map(l => l.split(sep));
+}
+function guessSep(text){
+  const s = text.slice(0, 4096);
+  if(s.includes("\t") && (!s.includes(",") || s.split("\t").length >= s.split(",").length)) return "\t";
+  if(s.includes(";") && !s.includes(",")) return ";";
+  return ",";
+}
+/* 图片 */
+function loadImg(blob){
+  return new Promise((res, rej) => {
+    const u = URL.createObjectURL(blob);
+    const im = new Image();
+    im.onload = () => { URL.revokeObjectURL(u); res(im); };
+    im.onerror = () => { URL.revokeObjectURL(u); rej(new Error("无法解析该图片（浏览器不支持此格式）")); };
+    im.src = u;
+  });
+}
+async function canvasFrom(blob, white){
+  const im = await loadImg(blob);
+  const w = im.naturalWidth, h = im.naturalHeight;
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const ctx = cv.getContext("2d");
+  if(white){ ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, w, h); }
+  ctx.drawImage(im, 0, 0, w, h);
+  return cv;
+}
+function toBlobP(cv, type, q){
+  return new Promise((res, rej) => cv.toBlob(b => b ? res(b) : rej(new Error("浏览器不支持导出 " + type + " 格式")), type, q));
+}
+function encodeBMP(cv){
+  const ctx = cv.getContext("2d");
+  const {width: w, height: h} = cv;
+  const img = ctx.getImageData(0, 0, w, h).data;
+  const rowSize = Math.ceil(w * 3 / 4) * 4;
+  const size = 54 + rowSize * h;
+  const buf = new ArrayBuffer(size); const v = new DataView(buf);
+  v.setUint8(0, 0x42); v.setUint8(1, 0x4d);
+  v.setUint32(2, size, true); v.setUint32(10, 54, true);
+  v.setUint32(14, 40, true); v.setInt32(18, w, true); v.setInt32(22, h, true);
+  v.setUint16(26, 1, true); v.setUint16(28, 24, true); v.setUint32(34, size - 54, true);
+  let off = 54;
+  for(let y = h - 1; y >= 0; y--){
+    const rowStart = off;
+    for(let x = 0; x < w; x++){
+      const i = (y * w + x) * 4;
+      v.setUint8(off++, img[i + 2]);
+      v.setUint8(off++, img[i + 1]);
+      v.setUint8(off++, img[i]);
+    }
+    off = rowStart + rowSize;
+  }
+  return new Blob([buf], {type: "image/bmp"});
+}
+async function encodeICO(cv){
+  const png = new Uint8Array(await (await toBlobP(cv, "image/png")).arrayBuffer());
+  const out = new Uint8Array(22 + png.length);
+  const v = new DataView(out.buffer);
+  v.setUint16(0, 0, true); v.setUint16(2, 1, true); v.setUint16(4, 1, true);
+  v.setUint8(6, 0); v.setUint8(7, 0); v.setUint8(8, 0); v.setUint8(9, 0);
+  v.setUint16(10, 1, true); v.setUint16(12, 32, true);
+  v.setUint32(14, png.length, true); v.setUint32(18, 22, true);
+  out.set(png, 22);
+  return new Blob([out], {type: "image/x-icon"});
+}
+/* Excel / 文档 */
+function sheetRows(buf){
+  const wb = XLSX.read(new Uint8Array(buf), {type: "array"});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  return XLSX.utils.sheet_to_json(ws, {header: 1, defval: ""});
+}
+function rowsToXlsx(rows){
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), "Sheet1");
+  return new Blob([XLSX.write(wb, {bookType: "xlsx", type: "array"})], {type: MIME.xlsx});
+}
+/* ffmpeg.wasm（网页版音视频引擎）
+   托管平台会对静态文件做跨域 302 跳转，浏览器 Worker 构造与 importScripts 不允许跨域重定向，
+   因此改用「同源 Blob Worker + 直接 CDN」方案：Worker 由本页 Blob 创建（同源），
+   内部再 importScripts 加载 CDN 上的引擎 chunk 与 core，从而绕开跨域跳转限制。
+   多 CDN 自动回退：cdn.jsdelivr.net 不可达时依次尝试 fastly / unpkg。 */
+let ffmpegP = null, ffCDNBase = null;
+const FFMPEG_LIB_PATH = "@ffmpeg/ffmpeg@0.12.10/dist/umd/ffmpeg.js";
+const FFMPEG_CORE_PATH = "@ffmpeg/core@0.12.6/dist/umd/";
+let ffWorkerPatched = false;
+function patchFFmpegWorker(){
+  if(ffWorkerPatched) return;
+  ffWorkerPatched = true;
+  const chunk = ffCDNBase + "@ffmpeg/ffmpeg@0.12.10/dist/umd/814.ffmpeg.js";
+  const blob = new Blob(['importScripts("' + chunk + '");'], {type: "text/javascript"});
+  const blobURL = URL.createObjectURL(blob);
+  const OrigWorker = window.Worker;
+  function PatchedWorker(url, opts){
+    const s = (url instanceof URL ? url.href : String(url));
+    if(s.indexOf("814.ffmpeg.js") !== -1 || s.indexOf("/ffmpeg/") !== -1){
+      return new OrigWorker(blobURL, opts);
+    }
+    return new OrigWorker(url, opts);
+  }
+  PatchedWorker.prototype = OrigWorker.prototype;
+  window.Worker = PatchedWorker;
+}
+function getFFmpeg(){
+  if(ffmpegP) return ffmpegP;
+  ffmpegP = (async () => {
+    onProg && onProg("正在加载网页版视频引擎（约 30MB，仅首次）…");
+    if(!ffCDNBase) ffCDNBase = await loadLib(FFMPEG_LIB_PATH);
+    patchFFmpegWorker();
+    const { FFmpeg } = FFmpegWASM;
+    const ff = new FFmpeg();
+    await ff.load({coreURL: ffCDNBase + FFMPEG_CORE_PATH + "ffmpeg-core.js", wasmURL: ffCDNBase + FFMPEG_CORE_PATH + "ffmpeg-core.wasm"});
+    return ff;
+  })();
+  return ffmpegP;
+}
+async function runMedia(srcName, bytes, args, to){
+  const ff = await getFFmpeg();
+  const ext = (srcName.split(".").pop() || "bin").toLowerCase().replace(/[^a-z0-9]/g, "x");
+  const inName = "in." + ext, out = "out." + to;
+  await ff.writeFile(inName, new Uint8Array(bytes));
+  try{
+    const code = await ff.exec(["-hide_banner", "-y", "-i", inName].concat(args).concat([out]));
+    if(code !== 0) throw new Error("ffmpeg 转换失败（错误码 " + code + "），该格式可能不受网页版引擎支持");
+    const data = await ff.readFile(out);
+    return new Blob([data.buffer], {type: MIME[to] || "application/octet-stream"});
+  } finally {
+    try{ await ff.deleteFile(inName); await ff.deleteFile(out); }catch(e){}
+  }
+}
+/*__CONVERTERS__*/
+
+/* ================= 文本 / 文档转换器 ================= */
+const CONV = {};  // id -> run(input, opts) -> Blob
+
+/* TXT → HTML */
+CONV.txt2html = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const html = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n" +
+    "<title>" + esc(t.split("\n")[0].slice(0, 40) || "文档") + "</title>\n" +
+    "<style>body{font-family:system-ui,'Microsoft YaHei',sans-serif;max-width:820px;margin:0 auto;padding:2.4em 1.6em;line-height:1.75;color:#24242a}pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Consolas,monospace;font-size:14px}</style>\n" +
+    "</head>\n<body>\n<pre>\n" + esc(t) + "\n</pre>\n</body>\n</html>\n";
+  return blobOf(html, "html");
+};
+/* 文本 → HTML（别名） */
+CONV.text2html = CONV.txt2html;
+/* TXT → Markdown */
+CONV.txt2md = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  return blobOf("```text\n" + t.replace(/\n$/, "") + "\n```\n", "md");
+};
+/* TXT → JSON（逐行数组） */
+CONV.txt2json = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const lines = t.split(/\r?\n/).filter(l => l.trim() !== "");
+  return blobOf(JSON.stringify(lines, null, 2), "json");
+};
+/* TXT → CSV */
+CONV.txt2csv = async ({bytes, text}, opts) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const sep = opts.sep || ",";
+  const rows = t.replace(/\r\n/g, "\n").split("\n").filter(l => l.trim() !== "").map(l => l.split(sep));
+  return blobOf(toCSV(rows), "csv");
+};
+/* TXT → PDF */
+CONV.txt2pdf = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  if(!window.jspdf) throw new Error("PDF 引擎加载失败");
+  const { jsPDF } = window.jspdf;
+  const W = 595, H = 842, m = 46, lh = 15, fs = 11, S = 2;
+  const pdf = new jsPDF("p", "pt", "a4");
+  const cw = (W - m * 2) * S, ch = (H - m * 2) * S;
+  const cv = document.createElement("canvas"); cv.width = cw; cv.height = ch;
+  const ctx = cv.getContext("2d");
+  ctx.font = fs * S + "px sans-serif";
+  ctx.fillStyle = "#000";
+  const lines = t.replace(/\r\n/g, "\n").split("\n");
+  let y = fs * S, pageDrawn = false;
+  const wrap = (line) => {
+    const out = [];
+    if(ctx.measureText(line).width <= cw){ return [line]; }
+    let cur = "";
+    for(const ch of line){
+      if(ctx.measureText(cur + ch).width > cw){ out.push(cur); cur = ch; }
+      else cur += ch;
+    }
+    if(cur) out.push(cur);
+    return out;
+  };
+  const flush = () => {
+    if(!pageDrawn) return;
+    pdf.addImage(cv.toDataURL("image/jpeg", 0.9), "JPEG", m, m, W - m * 2, H - m * 2);
+    ctx.clearRect(0, 0, cw, ch);
+    y = fs * S; pageDrawn = false;
+  };
+  for(const line of lines){
+    const ws = wrap(line || " ");
+    for(const w of ws){
+      if(y > ch - lh * S){ flush(); pdf.addPage(); }
+      ctx.fillText(w, 0, y);
+      y += lh * S; pageDrawn = true;
+    }
+  }
+  flush();
+  return new Blob([pdf.output("arraybuffer")], {type: MIME.pdf});
+};
+/* TXT → Word (docx) */
+CONV.txt2docx = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const paras = t.replace(/\r\n/g, "\n").split("\n");
+  const runXml = paras.map(p =>
+    "<w:p><w:pPr><w:spacing w:after=\"120\"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii=\"Calibri\" w:hAnsi=\"Calibri\" w:eastAsia=\"Microsoft YaHei\"/><w:sz w:val=\"22\"/></w:rPr><w:t xml:space=\"preserve\">" +
+    esc(p) + "</w:t></w:r></w:p>").join("");
+  const doc = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' +
+    runXml + '</w:body></w:document>';
+  const rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+  const ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+    '<Default Extension="xml" ContentType="application/xml"/>' +
+    '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>';
+  const zip = new JSZip();
+  zip.file("[Content_Types].xml", ct);
+  zip.file("_rels/.rels", rels);
+  zip.folder("word").file("document.xml", doc);
+  return new Blob([await zip.generateAsync({type: "blob", mimeType: MIME.docx})], {type: MIME.docx});
+};
+/* TXT → LRC */
+CONV.txt2lrc = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const lines = t.replace(/\r\n/g, "\n").split("\n").filter(l => l.trim() !== "");
+  const step = 4;
+  const out = lines.map((l, i) => {
+    const m = Math.floor(i * step / 60), s = (i * step % 60);
+    const mm = String(m).padStart(2, "0"), ss = String(s).padStart(2, "0");
+    return "[" + mm + ":" + ss + ".00]" + l;
+  }).join("\n");
+  return blobOf(out, "lrc");
+};
+/* 文本 → LRC（别名） */
+CONV.text2lrc = CONV.txt2lrc;
+/* Markdown → HTML */
+CONV.md2html = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  if(!window.marked) throw new Error("Markdown 引擎加载失败");
+  const body = window.marked.parse(t);
+  const html = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n" +
+    "<title>Markdown 文档</title>\n<style>body{font-family:system-ui,'Microsoft YaHei',sans-serif;max-width:820px;margin:0 auto;padding:2.4em 1.6em;line-height:1.75;color:#24242a}pre{background:#f6f6f4;padding:14px;border-radius:8px;overflow:auto}code{font-family:ui-monospace,Consolas,monospace}img{max-width:100%}table{border-collapse:collapse}td,th{border:1px solid #ddd;padding:6px 10px}blockquote{border-left:4px solid #ddd;margin-left:0;padding-left:14px;color:#666}</style>\n" +
+    "</head>\n<body>\n" + body + "\n</body>\n</html>\n";
+  return blobOf(html, "html");
+};
+/* HTML → TXT */
+CONV.html2txt = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const d = new DOMParser().parseFromString(t, "text/html");
+  d.querySelectorAll("script,style,noscript").forEach(n => n.remove());
+  const out = (d.body ? d.body.textContent : d.documentElement.textContent)
+    .replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim() + "\n";
+  return blobOf(out, "txt");
+};
+/* LRC → TXT */
+CONV.lrc2txt = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const out = t.split(/\r?\n/).map(l => l.replace(/^\[[\d:.]+\]\s*/, "")).join("\n");
+  return blobOf(out, "txt");
+};
+/* INI → JSON */
+CONV.ini2json = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const out = {}; let cur = out;
+  t.replace(/\r\n/g, "\n").split("\n").forEach(line => {
+    line = line.trim();
+    if(!line || line.startsWith(";") || line.startsWith("#")) return;
+    const sec = line.match(/^\[(.+)\]$/);
+    if(sec){ cur = out[sec[1].trim()] = {}; return; }
+    const eq = line.indexOf("=");
+    if(eq > 0){
+      let k = line.slice(0, eq).trim(), v = line.slice(eq + 1).trim();
+      if(!isNaN(v) && v !== "") v = Number(v);
+      if(v === "true") v = true; if(v === "false") v = false;
+      cur[k] = v;
+    }
+  });
+  return blobOf(JSON.stringify(out, null, 2), "json");
+};
+/* JSON → INI */
+CONV.json2ini = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const obj = JSON.parse(t);
+  const lines = [];
+  for(const k of Object.keys(obj)){
+    const v = obj[k];
+    if(v !== null && typeof v === "object" && !Array.isArray(v)){
+      lines.push("[" + k + "]");
+      for(const kk of Object.keys(v)) lines.push(kk + " = " + String(v[kk]));
+      lines.push("");
+    } else if(Array.isArray(v)){
+      v.forEach((item, i) => { if(item && typeof item === "object"){ lines.push("[" + k + "." + i + "]"); for(const kk of Object.keys(item)) lines.push(kk + " = " + String(item[kk])); lines.push(""); } });
+    } else {
+      lines.push(k + " = " + String(v));
+    }
+  }
+  return blobOf(lines.join("\n"), "ini");
+};
+/* DOCX → TXT */
+CONV.docx2txt = async ({bytes}) => {
+  if(!window.mammoth) throw new Error("Word 引擎加载失败");
+  const r = await window.mammoth.extractRawText({arrayBuffer: bytes});
+  return blobOf(r.value, "txt");
+};
+/* DOCX → HTML */
+CONV.docx2html = async ({bytes}) => {
+  if(!window.mammoth) throw new Error("Word 引擎加载失败");
+  const r = await window.mammoth.convertToHtml({arrayBuffer: bytes});
+  const html = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n<title>Word 转 HTML</title>\n" +
+    "<style>body{font-family:system-ui,'Microsoft YaHei',sans-serif;max-width:820px;margin:0 auto;padding:2.4em 1.6em;line-height:1.75;color:#24242a}img{max-width:100%}table{border-collapse:collapse}td,th{border:1px solid #ddd;padding:6px 10px}</style>\n</head>\n<body>\n" + r.value + "\n</body>\n</html>\n";
+  return blobOf(html, "html");
+};
+
+/* ================= 表格 / 数据转换器 ================= */
+/* CSV → JSON */
+CONV.csv2json = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const rows = parseCSV(t);
+  if(!rows.length) throw new Error("空表格");
+  const head = rows[0];
+  const arr = rows.slice(1).map(r => {
+    const o = {};
+    head.forEach((h, i) => { o[h || ("col" + (i + 1))] = r[i] !== undefined ? r[i] : ""; });
+    return o;
+  });
+  return blobOf(JSON.stringify(arr, null, 2), "json");
+};
+/* CSV → HTML */
+CONV.csv2html = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const rows = parseCSV(t);
+  const tr = r => "<tr>" + r.map(c => "<td>" + esc(c) + "</td>").join("") + "</tr>";
+  const head = rows[0] || [];
+  const body = rows.slice(1).map(tr).join("");
+  const html = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n<title>表格</title>\n" +
+    "<style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:0 auto;padding:2em}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #ddd;padding:6px 10px;text-align:left}th{background:#f4f4f2}</style>\n</head>\n<body>\n<table>\n<thead>" +
+    tr(head) + "</thead>\n<tbody>" + body + "</tbody>\n</table>\n</body>\n</html>\n";
+  return blobOf(html, "html");
+};
+/* CSV → Markdown */
+CONV.csv2md = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const rows = parseCSV(t);
+  const escCell = c => String(c).replace(/\|/g, "\\|").replace(/\n/g, "<br>");
+  const sepRow = (rows[0] || []).map(() => "---").join(" | ");
+  const out = [rows[0].map(escCell).join(" | "), sepRow]
+    .concat(rows.slice(1).map(r => r.map(escCell).join(" | ")))
+    .map(l => "| " + l + " |").join("\n");
+  return blobOf(out, "md");
+};
+/* CSV → TSV */
+CONV.csv2tsv = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const rows = parseCSV(t);
+  return blobOf(rows.map(r => r.map(c => String(c).replace(/[\t\n]/g, " ")).join("\t")).join("\n"), "tsv");
+};
+/* TSV → CSV */
+CONV.tsv2csv = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  return blobOf(toCSV(csvRows(t, "\t")), "csv");
+};
+/* CSV → XLSX */
+CONV.csv2xlsx = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  return rowsToXlsx(parseCSV(t));
+};
+/* XLSX → CSV */
+CONV.xlsx2csv = async ({bytes}) => blobOf(toCSV(sheetRows(bytes)), "csv");
+/* XLSX → JSON */
+CONV.xlsx2json = async ({bytes}) => {
+  const rows = sheetRows(bytes);
+  const head = rows[0] || [];
+  const arr = rows.slice(1).map(r => {
+    const o = {};
+    head.forEach((h, i) => { o[h || ("col" + (i + 1))] = r[i] !== undefined && r[i] !== "" ? r[i] : null; });
+    return o;
+  });
+  return blobOf(JSON.stringify(arr, null, 2), "json");
+};
+/* JSON → CSV */
+CONV.json2csv = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const arr = JSON.parse(t);
+  if(!Array.isArray(arr)) throw new Error("JSON 顶层必须是数组");
+  if(!arr.length) throw new Error("空数组");
+  const items = arr.map(o => (o && typeof o === "object") ? o : {value: o});
+  const head = [];
+  items.forEach(o => Object.keys(o).forEach(k => { if(!head.includes(k)) head.push(k); }));
+  const rows = [head].concat(items.map(o => head.map(k => o[k] !== undefined ? o[k] : "")));
+  return blobOf(toCSV(rows), "csv");
+};
+/* JSON → HTML */
+CONV.json2html = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const obj = JSON.parse(t);
+  const fmt = (v, k) => {
+    if(v === null) return '<span style="color:#999">null</span>';
+    if(typeof v === "object"){
+      if(Array.isArray(v)) return '<ul style="margin:2px 0;padding-left:20px">' + v.map(x => "<li>" + fmt(x, "") + "</li>").join("") + "</ul>";
+      return '<ul style="margin:2px 0;padding-left:20px">' + Object.keys(v).map(kk => "<li><b>" + esc(kk) + "</b>: " + fmt(v[kk], kk) + "</li>").join("") + "</ul>";
+    }
+    return esc(String(v));
+  };
+  const html = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"utf-8\">\n<title>JSON 视图</title>\n" +
+    "<style>body{font-family:ui-monospace,Consolas,monospace;max-width:900px;margin:0 auto;padding:2em;line-height:1.6;font-size:13px}ul{list-style:none}</style>\n</head>\n<body>\n" + fmt(obj, "") + "\n</body>\n</html>\n";
+  return blobOf(html, "html");
+};
+/* JSON → XML */
+CONV.json2xml = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const obj = JSON.parse(t);
+  const escXml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const toXml = (v, name, depth) => {
+    const ind = "  ".repeat(depth);
+    if(v === null) return ind + "<" + name + " null=\"true\"/>\n";
+    if(Array.isArray(v)){
+      if(!v.length) return ind + "<" + name + "/>\n";
+      return v.map(x => {
+        if(x !== null && typeof x === "object" && !Array.isArray(x)){
+          return ind + "<" + name + ">" + Object.keys(x).map(k => toXml(x[k], k, depth + 1)).join("") + ind + "</" + name + ">\n";
+        }
+        return ind + "<" + name + ">" + escXml(x) + "</" + name + ">\n";
+      }).join("");
+    }
+    if(typeof v === "object"){
+      return ind + "<" + name + ">" + Object.keys(v).map(k => toXml(v[k], k, depth + 1)).join("") + ind + "</" + name + ">\n";
+    }
+    return ind + "<" + name + ">" + escXml(v) + "</" + name + ">\n";
+  };
+  const root = "root";
+  const out = '<?xml version="1.0" encoding="UTF-8"?>\n' + toXml(obj, root, 0);
+  return blobOf(out, "xml");
+};
+/* XML → JSON */
+CONV.xml2json = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const d = new DOMParser().parseFromString(t, "application/xml");
+  const err = d.querySelector("parsererror");
+  if(err) throw new Error("XML 解析失败：" + err.textContent.slice(0, 80));
+  const conv = (el) => {
+    const kids = Array.from(el.children);
+    if(!kids.length) return el.textContent;
+    const o = {};
+    const seen = {};
+    kids.forEach(k => {
+      const v = conv(k);
+      const key = k.tagName;
+      if(seen[key] === undefined){ o[key] = v; seen[key] = true; }
+      else { if(!Array.isArray(o[key])) o[key] = [o[key]]; o[key].push(v); }
+    });
+    return o;
+  };
+  const obj = {};
+  Array.from(d.documentElement.children).forEach(k => { obj[k.tagName] = conv(k); });
+  if(!Object.keys(obj).length) obj[d.documentElement.tagName] = d.documentElement.textContent;
+  return blobOf(JSON.stringify(obj, null, 2), "json");
+};
+/* JSON → YAML */
+CONV.json2yaml = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  if(!window.jsyaml) throw new Error("YAML 引擎加载失败");
+  return blobOf(window.jsyaml.dump(JSON.parse(t), {lineWidth: 100}), "yaml");
+};
+/* YAML → JSON */
+CONV.yaml2json = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  if(!window.jsyaml) throw new Error("YAML 引擎加载失败");
+  return blobOf(JSON.stringify(window.jsyaml.load(t), null, 2), "json");
+};
+/* JSON → Markdown */
+CONV.json2md = async ({bytes, text}) => {
+  const t = text !== undefined ? text : readText(bytes);
+  const obj = JSON.parse(t);
+  const escCell = c => String(c).replace(/\|/g, "\\|").replace(/\n/g, "<br>");
+  if(Array.isArray(obj) && obj.length && typeof obj[0] === "object"){
+    const head = Object.keys(obj[0]);
+    const rows = obj.map(o => head.map(k => o[k] !== undefined && o[k] !== null ? o[k] : ""));
+    return blobOf("| " + head.map(escCell).join(" | ") + " |\n| " + head.map(() => "---").join(" | ") + " |\n" +
+      rows.map(r => "| " + r.map(escCell).join(" | ") + " |").join("\n"), "md");
+  }
+  return blobOf("```json\n" + JSON.stringify(obj, null, 2) + "\n```\n", "md");
+};
+/*__IMAGES_MEDIA__*/
+
+/* ================= 图片转换器 ================= */
+function imgBlob(bytes, type){ return new Blob([bytes], {type: type || "application/octet-stream"}); }
+CONV.png2jpg = async ({bytes}, opts) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/png"), true);
+  return await toBlobP(cv, "image/jpeg", (opts.quality || 92) / 100);
+};
+CONV.jpg2png = async ({bytes}) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/jpeg"), false);
+  return await toBlobP(cv, "image/png");
+};
+CONV.webp2png = async ({bytes}) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/webp"), false);
+  return await toBlobP(cv, "image/png");
+};
+CONV.png2webp = async ({bytes}, opts) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/png"), false);
+  return await toBlobP(cv, "image/webp", (opts.quality || 90) / 100);
+};
+CONV.bmp2png = async ({bytes}) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/bmp"), false);
+  return await toBlobP(cv, "image/png");
+};
+CONV.gif2png = async ({bytes}) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/gif"), false);
+  return await toBlobP(cv, "image/png");
+};
+CONV.jpg2webp = async ({bytes}, opts) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/jpeg"), false);
+  return await toBlobP(cv, "image/webp", (opts.quality || 90) / 100);
+};
+CONV.png2ico = async ({bytes}) => {
+  let cv = await canvasFrom(imgBlob(bytes, "image/png"), false);
+  if(cv.width > 256 || cv.height > 256){
+    const s = 256 / Math.max(cv.width, cv.height);
+    const c2 = document.createElement("canvas"); c2.width = Math.round(cv.width * s); c2.height = Math.round(cv.height * s);
+    c2.getContext("2d").drawImage(cv, 0, 0, c2.width, c2.height);
+    cv = c2;
+  }
+  return await encodeICO(cv);
+};
+CONV.tiff2png = async ({bytes}) => {
+  if(!window.UTIF) throw new Error("TIFF 引擎未加载");
+  const buf = new Uint8Array(bytes).buffer;
+  const ifds = UTIF.decode(buf);
+  if(!ifds || !ifds.length) throw new Error("TIFF 解析失败");
+  UTIF.decodeImage(buf, ifds[0]);
+  const cv = UTIF.toCanvas(ifds[0]);
+  return await toBlobP(cv, "image/png");
+};
+CONV.png2bmp = async ({bytes}) => {
+  const cv = await canvasFrom(imgBlob(bytes, "image/png"), false);
+  return encodeBMP(cv);
+};
+
+/* ================= 音视频转换器（网页版 ffmpeg） ================= */
+const MEDIA_BASE = {
+  mp4_mp3: ["-vn", "-c:a", "libmp3lame", "-q:a", "2"],
+  m4a_mp3: ["-vn", "-c:a", "libmp3lame", "-q:a", "2"],
+  flac_mp3: ["-vn", "-c:a", "libmp3lame", "-q:a", "2"],
+  wma_mp3: ["-vn", "-c:a", "libmp3lame", "-q:a", "2"],
+  mp3_wav: ["-vn", "-c:a", "pcm_s16le"],
+  wav_mp3: ["-vn", "-c:a", "libmp3lame", "-q:a", "2"],
+  wav_flac: ["-vn", "-c:a", "flac"],
+  mp3_ogg: ["-vn", "-c:a", "libvorbis", "-q:a", "4"],
+  mp4_avi: ["-c:v", "mpeg4", "-q:v", "5", "-c:a", "libmp3lame", "-q:a", "4"],
+  avi_mp4: ["-c:v", "libx264", "-preset", "medium", "-crf", "23", "-c:a", "aac"],
+  mov_mp4: ["-c:v", "libx264", "-preset", "medium", "-crf", "23", "-c:a", "aac"],
+  mkv_mp4: ["-c:v", "libx264", "-preset", "medium", "-crf", "23", "-c:a", "aac"],
+  webm_mp4: ["-c:v", "libx264", "-preset", "medium", "-crf", "23", "-c:a", "aac"],
+  mp4_webm: ["-c:v", "libvpx", "-crf", "30", "-b:v", "0", "-c:a", "libvorbis", "-q:a", "5"]
+};
+for(const [id, args] of Object.entries(MEDIA_BASE)){
+  CONV[id] = async ({name, bytes}, o) => {
+    onProg && onProg("正在转换（网页版 ffmpeg 引擎运行中）…");
+    return await runMedia(name, bytes, args, id.split("_")[1]);
+  };
+}
+CONV.mp4_gif = async ({name, bytes}, opts) => {
+  const fps = opts.fps || 10, w = opts.width || 480;
+  onProg && onProg("正在转换（网页版 ffmpeg 引擎运行中）…");
+  return await runMedia(name, bytes, ["-vf", "fps=" + fps + ",scale=" + w + ":-2:flags=lanczos"], "gif");
+};
+
+/* ================= 转换器注册表（56 种） ================= */
+function def(id, name, cat, from, to, desc, opts){ CONVS.push({id, name, cat, from, to, desc, text_input: from === "文本", options: opts || []}); }
+/* 文本文档 16 */
+def("txt2html", "TXT 转 HTML", "text", "txt", "html", "纯文本转网页文件，自动保留换行与转义");
+def("text2html", "文本转 HTML", "text", "文本", "html", "粘贴文本直接转网页文件");
+def("txt2md", "TXT 转 Markdown", "text", "txt", "md", "纯文本转为 Markdown 代码块文档");
+def("txt2json", "TXT 转 JSON", "text", "txt", "json", "按行拆分文本为 JSON 数组");
+def("txt2csv", "TXT 转 CSV", "text", "txt", "csv", "按分隔符把文本整理为表格", [{key:"sep", type:"select", label:"分隔符", default:",", options:[["\",\"", "逗号 ,"],[";", "分号 ;"],["\t", "制表符 Tab"]]}]);
+def("txt2pdf", "TXT 转 PDF", "text", "txt", "pdf", "文本转 PDF 文档，中文正常显示");
+def("txt2docx", "TXT 转 Word", "text", "txt", "docx", "文本转为 Word 文档（段落式排版）");
+def("txt2lrc", "TXT 转 LRC", "text", "txt", "lrc", "逐行加时间轴生成歌词字幕");
+def("text2lrc", "文本转 LRC 字幕", "text", "文本", "lrc", "粘贴文本直接生成 LRC 字幕");
+def("md2html", "Markdown 转 HTML", "text", "md", "html", "Markdown 渲染为完整网页");
+def("html2txt", "HTML 转 TXT", "text", "html", "txt", "网页提取纯文本，去掉标签");
+def("lrc2txt", "LRC 转 TXT", "text", "lrc", "txt", "去掉歌词时间轴只留文字");
+def("ini2json", "INI 转 JSON", "text", "ini", "json", "配置 INI 转 JSON，自动识别节与值类型");
+def("json2ini", "JSON 转 INI", "text", "json", "ini", "JSON 转回 INI 配置格式");
+def("docx2txt", "Word 转 TXT", "text", "docx", "txt", "Word 文档提取纯文本");
+def("docx2html", "Word 转 HTML", "text", "docx", "html", "Word 文档转为网页，保留标题与表格");
+/* 表格数据 15 */
+def("csv2json", "CSV 转 JSON", "table", "csv", "json", "表格转对象数组 JSON（首行为表头）");
+def("csv2html", "CSV 转 HTML", "table", "csv", "html", "表格数据渲染成网页表格");
+def("csv2md", "CSV 转 Markdown", "table", "csv", "md", "表格转 Markdown 表格语法");
+def("csv2tsv", "CSV 转 TSV", "table", "csv", "tsv", "逗号分隔转制表符分隔");
+def("tsv2csv", "TSV 转 CSV", "table", "tsv", "csv", "制表符分隔转逗号分隔");
+def("csv2xlsx", "CSV 转 Excel", "table", "csv", "xlsx", "表格转为 Excel 工作簿");
+def("xlsx2csv", "Excel 转 CSV", "table", "xlsx", "csv", "Excel 首个工作表转 CSV");
+def("xlsx2json", "Excel 转 JSON", "table", "xlsx", "json", "Excel 首个工作表转对象数组 JSON");
+def("json2csv", "JSON 转 CSV", "table", "json", "csv", "对象数组 JSON 转表格（自动提取字段）");
+def("json2html", "JSON 转 HTML", "table", "json", "html", "JSON 渲染为可读网页视图");
+def("json2xml", "JSON 转 XML", "table", "json", "xml", "JSON 转 XML 文档");
+def("xml2json", "XML 转 JSON", "table", "xml", "json", "XML 解析为 JSON（子节点自动合并）");
+def("json2yaml", "JSON 转 YAML", "table", "json", "yaml", "JSON 转 YAML 配置格式");
+def("yaml2json", "YAML 转 JSON", "table", "yaml", "json", "YAML 配置解析为 JSON");
+def("json2md", "JSON 转 Markdown", "table", "json", "md", "对象数组 JSON 转 Markdown 表格");
+/* 图片 10 */
+def("png2jpg", "PNG 转 JPG", "image", "png", "jpg", "PNG 转 JPG，白色背景", [{key:"quality", type:"range", label:"质量", min:10, max:100, default:92}]);
+def("jpg2png", "JPG 转 PNG", "image", "jpg", "png", "JPG 转 PNG，保留透明通道");
+def("webp2png", "WebP 转 PNG", "image", "webp", "png", "WebP 图片转 PNG");
+def("png2webp", "PNG 转 WebP", "image", "png", "webp", "PNG 转 WebP，体积更小", [{key:"quality", type:"range", label:"质量", min:10, max:100, default:90}]);
+def("bmp2png", "BMP 转 PNG", "image", "bmp", "png", "BMP 位图转 PNG");
+def("gif2png", "GIF 转 PNG", "image", "gif", "png", "GIF 取首帧转 PNG");
+def("jpg2webp", "JPG 转 WebP", "image", "jpg", "webp", "JPG 转 WebP，体积更小", [{key:"quality", type:"range", label:"质量", min:10, max:100, default:90}]);
+def("png2ico", "PNG 转 ICO", "image", "png", "ico", "PNG 转图标 ICO（256×256）");
+def("tiff2png", "TIFF 转 PNG", "image", "tiff", "png", "TIFF 多页图转 PNG");
+def("png2bmp", "PNG 转 BMP", "image", "png", "bmp", "PNG 转无损 BMP 位图");
+/* 音视频 15 */
+def("mp4_mp3", "MP4 转 MP3", "media", "mp4", "mp3", "视频提取音频为 MP3");
+def("m4a_mp3", "M4A 转 MP3", "media", "m4a", "mp3", "M4A 音频转 MP3");
+def("flac_mp3", "FLAC 转 MP3", "media", "flac", "mp3", "无损音频转 MP3");
+def("wma_mp3", "WMA 转 MP3", "media", "wma", "mp3", "WMA 音频转 MP3");
+def("mp3_wav", "MP3 转 WAV", "media", "mp3", "wav", "MP3 转无损 WAV");
+def("wav_mp3", "WAV 转 MP3", "media", "wav", "mp3", "WAV 转 MP3 压缩格式");
+def("wav_flac", "WAV 转 FLAC", "media", "wav", "flac", "WAV 转 FLAC 无损压缩");
+def("mp3_ogg", "MP3 转 OGG", "media", "mp3", "ogg", "MP3 转 OGG 开源格式");
+def("mp4_gif", "MP4 转 GIF", "media", "mp4", "gif", "视频片段转 GIF 动图", [{key:"fps", type:"number", label:"帧率", min:1, max:30, default:10}, {key:"width", type:"number", label:"宽度", min:100, max:1920, default:480}]);
+def("mp4_avi", "MP4 转 AVI", "media", "mp4", "avi", "MP4 转 AVI 兼容格式");
+def("avi_mp4", "AVI 转 MP4", "media", "avi", "mp4", "AVI 转 MP4 通用格式");
+def("mov_mp4", "MOV 转 MP4", "media", "mov", "mp4", "MOV 视频转 MP4");
+def("mkv_mp4", "MKV 转 MP4", "media", "mkv", "mp4", "MKV 视频转 MP4");
+def("webm_mp4", "WebM 转 MP4", "media", "webm", "mp4", "WebM 视频转 MP4");
+def("mp4_webm", "MP4 转 WebM", "media", "mp4", "webm", "MP4 转 WebM 开源格式");
+
+/* ================= 界面逻辑 ================= */
+const LIB_BASES = ["https://cdn.jsdelivr.net/npm/", "https://fastly.jsdelivr.net/npm/", "https://unpkg.com/"];
+const libCache = {};
+function loadScriptFromBase(base, path){
+  const url = base + path;
+  return libCache[url] || (libCache[url] = new Promise((res, rej) => {
+    const s = document.createElement("script");
+    s.src = url;
+    s.onload = () => res();
+    s.onerror = () => { delete libCache[url]; rej(new Error("依赖库加载失败：" + url)); };
+    document.head.appendChild(s);
+  }));
+}
+async function loadLib(path){
+  let lastErr = null;
+  for(const base of LIB_BASES){
+    try{ await loadScriptFromBase(base, path); return base; }
+    catch(e){ lastErr = e; }
+  }
+  throw lastErr || new Error("依赖库加载失败");
+}
+const LIB_URLS = {
+  marked: "marked@12.0.2/marked.min.js",
+  jspdf: "jspdf@2.5.1/dist/jspdf.umd.min.js",
+  jszip: "jszip@3.10.1/dist/jszip.min.js",
+  mammoth: "mammoth@1.6.0/mammoth.browser.min.js",
+  xlsx: "xlsx@0.18.5/dist/xlsx.full.min.js",
+  yaml: "js-yaml@4.1.0/dist/js-yaml.min.js",
+  utif: "utif@3.1.0/UTIF.min.js"
+};
+const LIBS = {
+  md2html: ["marked"], txt2pdf: ["jspdf"], txt2docx: ["jszip"],
+  docx2txt: ["mammoth"], docx2html: ["mammoth"],
+  csv2xlsx: ["xlsx"], xlsx2csv: ["xlsx"], xlsx2json: ["xlsx"],
+  json2yaml: ["yaml"], yaml2json: ["yaml"], tiff2png: ["utif"]
+};
+async function ensureLibs(id){
+  for(const l of (LIBS[id] || [])) await loadLib(LIB_URLS[l]);
+  const conv = CONVS.find(c => c.id === id);
+  if(conv && conv.cat === "media"){ if(!ffCDNBase) ffCDNBase = await loadLib(FFMPEG_LIB_PATH); }
+}
+
+function renderTabs(){
+  const t = $("#tabs");
+  const countOf = c => c === "all" ? CONVS.length : CONVS.filter(x => x.cat === c).length;
+  const items = [["all","全部"]].concat(CATS);
+  t.innerHTML = items.map(([id, name]) =>
+    '<button class="tab' + (id === "all" ? " on" : "") + '" data-cat="' + id + '">' + name +
+    '<span class="n">' + countOf(id) + '</span></button>').join("");
+  t.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+    t.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+    b.classList.add("on");
+    stateCat = b.dataset.cat;
+    renderGrid();
+  });
+}
+let stateCat = "all";
+function renderGrid(){
+  const q = $("#search").value.trim().toLowerCase();
+  const list = CONVS.filter(c => {
+    if(stateCat !== "all" && c.cat !== stateCat) return false;
+    if(!q) return true;
+    return (c.name + " " + c.from + " " + c.to + " " + c.desc).toLowerCase().includes(q);
+  });
+  const g = $("#grid");
+  if(!list.length){
+    g.innerHTML = '<div class="empty">没有找到匹配的转换方式，换个关键词试试</div>';
+    return;
+  }
+  g.innerHTML = list.map(c => {
+    const from = c.text_input ? "文本" : c.from.toUpperCase();
+    const color = CAT_COLORS[c.cat] || "text-c";
+    return '<article class="card" data-id="' + c.id + '">' +
+      '<div class="chips"><span class="chip from">' + from + '</span><span class="arrow">→</span>' +
+      '<span class="chip to" style="--c:var(--' + color + ');--c-soft:color-mix(in srgb,var(--' + color + ') 12%,transparent)">' + c.to.toUpperCase() + '</span></div>' +
+      '<h3>' + c.name + '</h3><p>' + c.desc + '</p>' +
+      '<div class="card-foot"><span class="tag">' + from + ' → ' + c.to.toUpperCase() + '</span></div></article>';
+  }).join("");
+  g.querySelectorAll(".card").forEach(card => {
+    card.onclick = () => openModal(CONVS.find(x => x.id === card.dataset.id));
+  });
+}
+$("#search").addEventListener("input", renderGrid);
+
+function openModal(conv){
+  curConv = conv; files = []; opts = {};
+  busy = false; clearInterval(timer);
+  $("#results").innerHTML = ""; $("#fileList").innerHTML = "";
+  $("#progress").hidden = true; $("#goHint").textContent = "";
+  $("#mChips").innerHTML =
+    '<span class="chip from">' + (conv.text_input ? "文本" : conv.from.toUpperCase()) + '</span>' +
+    '<span class="arrow">→</span><span class="chip to" style="--c:var(--' + CAT_COLORS[conv.cat] + ');--c-soft:color-mix(in srgb,var(--' + CAT_COLORS[conv.cat] + ') 12%,transparent)">' + conv.to.toUpperCase() + '</span>';
+  $("#mTitle").textContent = conv.name;
+  $("#mDesc").textContent = conv.desc + (conv.text_input ? "（无需文件，直接粘贴内容即可）" : "");
+  $("#textzone").hidden = !conv.text_input;
+  $("#dropzone").hidden = conv.text_input;
+  $("#fileInput").hidden = conv.text_input;
+  renderOptions(conv.options || []);
+  $("#modal").hidden = false; $("#backdrop").hidden = false;
+  $("#goBtn").disabled = false;
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  $("#modal").hidden = true; $("#backdrop").hidden = true;
+  document.body.style.overflow = "";
+  clearInterval(timer);
+}
+$("#closeBtn").onclick = closeModal;
+$("#backdrop").onclick = closeModal;
+document.addEventListener("keydown", e => { if(e.key === "Escape" && !$("#modal").hidden) closeModal(); });
+
+function renderOptions(schema){
+  const box = $("#options"); box.innerHTML = "";
+  schema.forEach(o => {
+    opts[o.key] = o.default;
+    let ctl = "";
+    if(o.type === "bool"){
+      ctl = '<label class="chk"><input type="checkbox" data-k="' + o.key + '"' + (o.default ? " checked" : "") + '> ' + o.label + '</label>';
+    }else if(o.type === "select"){
+      ctl = '<label>' + o.label + ' <select data-k="' + o.key + '">' +
+        o.options.map(([v, l]) => '<option value="' + v + '"' + (String(o.default) === String(v) ? " selected" : "") + '>' + l + '</option>').join("") +
+        '</select></label>';
+    }else if(o.type === "range"){
+      ctl = '<label>' + o.label + ' <span class="rval" id="rv-' + o.key + '">' + o.default + '</span> <input type="range" data-k="' + o.key + '" min="' + o.min + '" max="' + o.max + '" value="' + o.default + '"></label>';
+    }else{
+      ctl = '<label>' + o.label + ' <input type="number" data-k="' + o.key + '" min="' + (o.min ?? 1) + '" max="' + (o.max ?? 60) + '" value="' + o.default + '"></label>';
+    }
+    const w = document.createElement("div"); w.className = "opt"; w.innerHTML = ctl;
+    box.appendChild(w);
+    const input = w.querySelector("[data-k]");
+    input.addEventListener("input", () => {
+      let v = input.type === "checkbox" ? input.checked : input.value;
+      if(input.type === "number" || input.type === "range") v = Number(v);
+      opts[o.key] = v;
+      if(input.type === "range"){
+        const rv = document.getElementById("rv-" + o.key);
+        if(rv) rv.textContent = v;
+      }
+    });
+  });
+}
+
+const dz = $("#dropzone");
+dz.onclick = () => $("#fileInput").click();
+$("#fileInput").addEventListener("change", e => { addFiles(e.target.files); e.target.value = ""; });
+["dragenter","dragover"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("over"); }));
+["dragleave","drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("over"); }));
+dz.addEventListener("drop", e => addFiles(e.dataTransfer.files));
+function addFiles(list){
+  if(!list || !list.length) return;
+  for(const f of list){
+    if(f.size > 2 * 1073741824){ toast("「" + f.name + "」超过 2GB，浏览器可能无法处理"); continue; }
+    if(curConv && curConv.cat === "media" && f.size > 500 * 1048576){
+      toast("「" + f.name + "」较大（>500MB），网页版引擎转换会较慢，建议先用小文件测试");
+    }
+    files.push(f);
+  }
+  renderFileList();
+}
+function renderFileList(){
+  const box = $("#fileList");
+  if(!files.length){ box.innerHTML = ""; return; }
+  box.innerHTML = files.map((f, i) =>
+    '<div class="fitem"><span class="fname">' + esc(f.name) + '</span>' +
+    '<span class="fsize">' + fmtSize(f.size) + '</span>' +
+    '<button data-i="' + i + '" title="移除">✕</button></div>').join("");
+  box.querySelectorAll("button").forEach(b => b.onclick = () => {
+    files.splice(Number(b.dataset.i), 1); renderFileList();
+  });
+}
+
+$("#goBtn").onclick = () => {
+  if(busy) return;
+  if(curConv.text_input){
+    if(!$("#textInput").value.trim()){ toast("请先粘贴需要转换的文本"); return; }
+    queue = [null];
+  }else{
+    if(!files.length){ toast("请先选择要转换的文件"); return; }
+    queue = files.slice();
+  }
+  busy = true; $("#goBtn").disabled = true;
+  next();
+};
+function next(){
+  if(!queue.length){
+    busy = false; $("#goBtn").disabled = false;
+    $("#progress").hidden = true; clearInterval(timer);
+    $("#goHint").textContent = "全部完成";
+    return;
+  }
+  const item = queue.shift();
+  convertOne(item);
+}
+async function convertOne(file){
+  const label = file ? file.name : "粘贴文本";
+  $("#progress").hidden = false;
+  setBar(0, "准备中…");
+  const t0 = Date.now();
+  clearInterval(timer);
+  timer = setInterval(() => setBar(null, "转换中… " + Math.round((Date.now() - t0) / 1000) + " 秒"), 1000);
+  try{
+    onProg = t => setBar(null, t);
+    await ensureLibs(curConv.id);
+    const input = file ? {name: label, bytes: await file.arrayBuffer()} : {name: label, text: $("#textInput").value};
+    const blob = await CONV[curConv.id](input, opts);
+    const outName = outFileName(label);
+    addResult(label, outName, URL.createObjectURL(blob), blob.size, null);
+  }catch(e){
+    addResult(label, null, null, 0, (e && e.message) || String(e));
+  }finally{
+    onProg = null;
+  }
+  next();
+}
+function addResult(srcName, outName, url, size, err){
+  const box = $("#results");
+  const row = document.createElement("div");
+  row.className = "ritem" + (err ? " err" : "");
+  if(err){
+    row.innerHTML = '<span class="okmark">✕</span><span class="rname">' + esc(srcName) + '</span><span class="rmsg" title="' + esc(err) + '">' + esc(err) + '</span>';
+  }else{
+    row.innerHTML = '<span class="okmark">✓</span><span class="rname">' + esc(outName) + '</span>' +
+      '<span class="rsize">' + fmtSize(size) + '</span>' +
+      '<button class="dl" data-url="' + url + '" data-name="' + esc(outName) + '">下载</button>';
+    row.querySelector(".dl").onclick = e => {
+      const a = document.createElement("a");
+      a.href = e.currentTarget.dataset.url;
+      a.download = e.currentTarget.dataset.name;
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+  }
+  box.prepend(row);
+}
+
+$("#footEngines").textContent = "已内置：文档 · 表格 · 图片 · 音视频（ffmpeg）引擎，随用随载";
+renderTabs();
+renderGrid();
+</script>
+</body>
+</html>
